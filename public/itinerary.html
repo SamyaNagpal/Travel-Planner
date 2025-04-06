@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelM - Itinerary Builder</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">TravelBuddy</div>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">Home</a>
+            <a href="budget.html" class="nav-link">Budget</a>
+            <a href="itinerary.html" class="nav-link active">Itinerary</a>
+        </div>
+    </nav>
+
+    <main class="itinerary-container">
+        <!-- Destination Input Section -->
+        <section class="destination-input">
+            <input type="text" 
+                   id="destination" 
+                   class="destination-search"
+                   placeholder="Enter destination (e.g., Tokyo)">
+            <div class="date-group">
+                <input type="date" 
+                       id="startDate" 
+                       class="date-picker">
+                <input type="date" 
+                       id="endDate" 
+                       class="date-picker">
+            </div>
+            <button id="fetchActivities" 
+                    class="search-button">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </section>
+
+        <!-- Activity Suggestions -->
+        <section class="activity-panel">
+            <h3 class="panel-title">Suggested Activities</h3>
+            <div class="suggestions-grid" id="suggestions">
+                <!-- JavaScript will populate activities here -->
+            </div>
+        </section>
+
+        <!-- Itinerary Days Container -->
+        <section class="itinerary-days" id="daysContainer">
+            <!-- JavaScript will create day columns here -->
+        </section>
+
+        <!-- Save Button -->
+        <div class="action-bar">
+            <button id="saveItinerary" class="save-button">
+                <i class="fas fa-save"></i> Save Itinerary
+            </button>
+        </div>
+    </main>
+
+    <script src="scripts/itinerary.js"></script>
+</body>
+</html>
