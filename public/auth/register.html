@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelBuddy - Register</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-card">
+            <h1>Create Account</h1>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required minlength="6">
+                </div>
+                <button type="submit" class="auth-btn">Register</button>
+            </form>
+            <div class="auth-links">
+                <a href="../auth/login.html">Already have an account?</a>
+            </div>
+            <div id="authError" class="auth-error"></div>
+        </div>
+    </div>
+    <script type="module" src="register.js"></script>
+</body>
+</html>

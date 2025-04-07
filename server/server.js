@@ -7,11 +7,18 @@ require('dotenv').config();
 
 const app = express();
 
+
+
 // Middleware
+
+app.use(express.json()); // For parsing application/json
+app.use(express.urlencoded({ extended: true })); // For form data
+
 app.use(cors({
-  origin: ['http://127.0.0.1:5500', 'http://localhost:5500']
+  origin: ['http://localhost:5500'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  credentials: true
 }));
-app.use(express.json());
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI)
