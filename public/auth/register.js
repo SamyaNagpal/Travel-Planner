@@ -1,25 +1,21 @@
+console.log("register.js loaded");
+
 import { handleAuthResponse, storeToken, redirectIfAuthenticated } from '../scripts/auth.js';
 
-// Configuration
 const API_BASE_URL = 'http://localhost:3000/api';
 
-// Redirect if already logged in
 redirectIfAuthenticated();
 
-// Form submission handler
 document.getElementById('registerForm').addEventListener('submit', async (e) => {
     e.preventDefault();
-    
+
     const form = e.target;
     const email = form.email.value.trim();
     const password = form.password.value;
     const errorElement = document.getElementById('authError');
-
-    // Clear previous errors
     errorElement.textContent = '';
 
     try {
-        // Basic client-side validation
         if (!email || !password) {
             throw new Error('Please fill in all fields');
         }
@@ -28,6 +24,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
             throw new Error('Password must be at least 6 characters');
         }
 
+        console.log('Sending request to:', `${API_BASE_URL}/register`);
         const response = await fetch(`${API_BASE_URL}/register`, {
             method: 'POST',
             headers: { 
@@ -37,17 +34,21 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
             body: JSON.stringify({ email, password })
         });
 
-        if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || 'Registration failed');
-        }
+        console.log('Response status:', response.status);
 
         const data = await response.json();
+        if (!response.ok) {
+            throw new Error(data.error || 'Registration failed');
+        }
+
+        console.log('Registration success:', data);
         storeToken(data.token);
         window.location.href = '../itinerary.html';
 
     } catch (error) {
         console.error('Registration error:', error);
-        errorElement.textContent = error.message;
+        errorElement.textContent = error.message === 'Failed to fetch'
+            ? 'Cannot reach server. Is it running?'
+            : error.message;
     }
 });
