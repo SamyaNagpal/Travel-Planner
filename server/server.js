@@ -10,15 +10,17 @@ const app = express();
 
 
 // Middleware
+app.use(cors({
+  origin: ['http://localhost:5500', 'http://127.0.0.1:5500'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
 app.use(express.json()); // For parsing application/json
 app.use(express.urlencoded({ extended: true })); // For form data
 
-app.use(cors({
-  origin: ['http://localhost:5500'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true
-}));
+
 
 // Database Connection
 mongoose.connect(process.env.MONGODB_URI)
@@ -63,6 +65,9 @@ const authenticate = (req, res, next) => {
 };
 
 // Routes
+
+
+
 app.post('/api/register', async (req, res) => {
   try {
     const { email, password } = req.body;
@@ -79,6 +84,8 @@ app.post('/api/register', async (req, res) => {
     // Create token
     const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET || 'your-secret-key');
     res.status(201).json({ token });
+
+    console.log('POST /api/register hit');
 
   } catch (err) {
     if (err.code === 11000) {
