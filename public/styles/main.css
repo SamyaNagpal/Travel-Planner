@@ -1,10 +1,37 @@
 /* ===== NAVIGATION ===== */
-.navbar {
+nav{
+  width: 100%;
+  height: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 5%;
-  background: #2c3e50; /* Dark blue */
+  z-index: 999;
+}
+.sticky_nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 35px;
+  background-color: #2c3e50;
+  transition: var(--transition2);
+  transform: translateY(-100px);
+  opacity: 0;
+  animation: anim_up .6s forwards linear;
+}
+@keyframes anim_up{
+  100%{
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+.normal-logo {
+  display: block;
+}
+.sticky-logo {
+  display: none;
 }
 
 .logo img,
@@ -12,24 +39,35 @@
   width: 150px;                 /* You can adjust this value as needed */
   height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+  
   mix-blend-mode: lighten;
+}
+
+.sticky_nav .normal-logo {
+  display: none;
+}
+.sticky_nav .sticky-logo {
+  display: block;
 }
 
 
 .nav-links {
   display: flex;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
 }
 
 .nav-links a {
-  color: white;
+  color: black;
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.3s ease;
 }
 
+.sticky_nav .nav-links a{
+  color: white;
+  gap: 3rem;
+}
 .nav-links a:hover {
   opacity: 0.8;
 }
