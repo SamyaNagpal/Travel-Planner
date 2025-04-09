@@ -15,57 +15,59 @@
             <a href="home.html" class="active">Home</a>
             <a href="itinerary.html">Itinerary</a>
         </div>
-        
     </nav>
-
-    <main class="budget-container">
-        <!-- Updated Form -->
-        <div id="loader" class="loader"></div>
-        <section class="details-form">
-            <h2>Enter Your Details</h2>
-            <div class="form-group">
-                <label>Destination</label>
-                <input type="text" id="destinationInput" placeholder="Enter destination">
-            </div>
-            <div class="date-group">
+    <section class="content">
+        <main class="budget-container">
+            <!-- Updated Form -->
+            <div id="loader" class="loader"></div>
+            <br>
+            <br>
+            <br>
+            <section class="details-form">
+                <h2>Enter Your Details</h2>
                 <div class="form-group">
-                    <label>Start Date</label>
-                    <input type="date" id="startDate">
+                    <label>Destination</label>
+                    <input type="text" id="destinationInput" placeholder="Enter destination">
                 </div>
-                <div class="form-group">
-                    <label>End Date</label>
-                    <input type="date" id="endDate">
+                <div class="date-group">
+                    <div class="form-group">
+                        <label>Start Date</label>
+                        <input type="date" id="startDate">
+                    </div>
+                    <div class="form-group">
+                        <label>End Date</label>
+                        <input type="date" id="endDate">
+                    </div>
                 </div>
-            </div>
-            <button class="calculate-btn">Calculate Budget</button>
-        </section>
-        <br><br>
+                <button class="calculate-btn">Calculate Budget</button>
+            </section>
+            <br><br>
 
-        <!-- Updated Results -->
-        <section class="budget-summary">
-            <h1>Estimated Budget Breakdown</h1>
-            <div class="cost-items">
-                <div class="cost-item">
-                    <span class="category">Hotel</span>
-                    <span class="amount" id="hotelCost">$0</span>
+            <!-- Updated Results -->
+            <section class="budget-summary">
+                <h1>Estimated Budget Breakdown</h1>
+                <div class="cost-items">
+                    <div class="cost-item">
+                        <span class="category">Hotel</span>
+                        <span class="amount" id="hotelCost">$0</span>
+                    </div>
+                    <div class="cost-item">
+                        <span class="category">Food</span>
+                        <span class="amount" id="foodCost">$0</span>
+                    </div>
+                    <div class="cost-item">
+                        <span class="category">Transportation</span>
+                        <span class="amount" id="transportCost">$0</span>
+                    </div>
+                    <div class="total-cost">
+                        <span>Total Estimated Cost</span>
+                        <span class="amount" id="totalCost">$0</span>
+                    </div>
                 </div>
-                <div class="cost-item">
-                    <span class="category">Food</span>
-                    <span class="amount" id="foodCost">$0</span>
-                </div>
-                <div class="cost-item">
-                    <span class="category">Transportation</span>
-                    <span class="amount" id="transportCost">$0</span>
-                </div>
-                <div class="total-cost">
-                    <span>Total Estimated Cost</span>
-                    <span class="amount" id="totalCost">$0</span>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">...</footer>
+            </section>
+            <br><br>
+        </main>
+    </section>
 
     <!-- Add JavaScript -->
     <script src="scripts/budget.js"></script>

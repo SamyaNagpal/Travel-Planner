@@ -8,6 +8,9 @@
   text-decoration: none;
   scroll-behavior: smooth;
 }
+body{
+  background-color: #e2eefd;
+}
 
 /* ===== NAVIGATION ===== */
 nav{
@@ -170,6 +173,7 @@ nav{
 /* ===== FEATURES SECTION ===== */
 .features {
   padding: 4rem 5%;
+  background-color: white;
 }
 
 .section-title {
@@ -182,8 +186,8 @@ nav{
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
+  gap: 4rem;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -269,6 +273,8 @@ nav{
   background: #2ecc71; /* Teal */
   color: white;
   padding: 4rem 5%;
+  border-bottom-left-radius: 50% 20%;
+    border-bottom-right-radius: 50% 20%;
 }
 
 .app-content {
@@ -342,6 +348,8 @@ nav{
       order: -1;
   }
 }
+
+
 
 /* ===== FOOTER ===== */
 .main-footer {
