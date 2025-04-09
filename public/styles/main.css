@@ -79,7 +79,7 @@ nav{
 
 .nav-links a:hover {
   opacity: 0.8;
-  color:#3498db;
+  color:#214fb5;
 }
 
 .sticky_nav .nav-links a{
@@ -188,7 +188,7 @@ nav{
 }
 
 .feature-card {
-  background: #e8efef;
+  background: #e9f1f1;
   padding: 2rem;
   border-radius: 10px;
   text-align: center;
