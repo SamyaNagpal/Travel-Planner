@@ -1,0 +1,200 @@
+/* Itinerary Page Styles */
+.itinerary-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem 3rem;
+  }
+  
+  /* Destination Input Section */
+  .destination-input {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  
+  .date-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  
+  .destination-search,
+  .date-picker {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+  }
+  
+  .destination-search:focus,
+  .date-picker:focus {
+    outline: none;
+    border-color: #3498db;
+  }
+  
+  .search-button {
+    background: #3498db;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+  }
+  
+  .search-button:hover {
+    background: #2980b9;
+  }
+  
+  /* Activity Suggestions Panel */
+  .activity-panel {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    margin-bottom: 3rem;
+  }
+  
+  .panel-title {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+  
+  .suggestions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* Itinerary Days Section */
+  .itinerary-days {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .day-column {
+    background: white;
+    border: 2px solid #f0f0f0;
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+  
+  .day-column:hover {
+    transform: translateY(-4px);
+  }
+  
+  .day-header {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+  
+  .day-header h3 {
+    color: #2c3e50;
+    margin: 0;
+    font-size: 1.2rem;
+  }
+  
+  .date {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+  }
+  
+  /* Activity Items */
+  .activity-item {
+    background: white;
+    border: 2px solid #f0f0f0;
+    padding: 1.2rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    cursor: move;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .activity-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .activity-item.dragging {
+    opacity: 0.5;
+    border-style: dashed;
+  }
+  
+  .activity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8rem;
+  }
+  
+  .activity-header h4 {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1rem;
+  }
+  
+  .activity-price {
+    color: #27ae60;
+    font-weight: 600;
+  }
+  
+  .activity-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+  }
+  
+  /* Save Button */
+  #saveItinerary {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: #2ecc71;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  #saveItinerary:hover {
+    background: #27ae60;
+    transform: translateY(-2px);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .date-group {
+      grid-template-columns: 1fr;
+    }
+    
+    .itinerary-days {
+      grid-template-columns: 1fr;
+    }
+    
+    .search-button {
+      width: 100%;
+      justify-content: center;
+    }
+    
+    #saveItinerary {
+      bottom: 1rem;
+      right: 1rem;
+    }
+  }
