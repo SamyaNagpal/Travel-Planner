@@ -112,9 +112,7 @@ app.post('/api/login', async (req, res) => {
     res.status(500).json({ error: 'Login failed' });
   }
 });
-
-// Protected Routes
-app.get('/api/destination/:name', authenticate, async (req, res) => {
+app.get('/api/destination/:name', async (req, res) => {
   try {
     const destination = await Destination.findOne({ 
       name: { $regex: new RegExp(req.params.name, 'i') }
@@ -124,6 +122,10 @@ app.get('/api/destination/:name', authenticate, async (req, res) => {
     res.status(500).json({ error: 'Server error' });
   }
 });
+
+
+// Protected Routes
+
 
 app.get('/api/user', authenticate, async (req, res) => {
   try {
