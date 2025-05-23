@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheTravels - TravelBuddy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/she-travels.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="/placeholder.svg?height=40&width=150" alt="TravelBuddy Logo">
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="budget.html">Budget</a></li>
+                        <li><a href="itinerary.html">Itinerary</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html" class="btn-register">Register</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-shape"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-text">She<span>Travels</span></h1>
+                    <p>Empowering women to explore the world safely, confidently, and on their own terms.</p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary cta-button">
+                            <span>Explore Features</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-secondary">
+                            <i class="fas fa-play"></i>
+                            <span>Watch Video</span>
+                        </button>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">10K+</span>
+                            <span class="stat-text">Women Travelers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-text">Countries</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">100%</span>
+                            <span class="stat-text">Safe Journeys</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://images.unsplash.com/photo-1527631746610-bca00a040d60?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Woman Traveler">
+                    <div class="floating-card">
+                        <div class="card-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="card-text">
+                            <h4>Safety First</h4>
+                            <p>Verified locations & 24/7 support</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-down">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Offerings</span>
+                <h2 class="section-title">Designed for Women Travelers</h2>
+                <p class="section-description">Our specialized features ensure your journey is safe, enjoyable, and tailored to your needs as a solo female traveler.</p>
+            </div>
+            <div class="features-wrapper">
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Safety First</h3>
+                        <p>Verified accommodations, safety ratings, emergency SOS button, and local emergency information at your fingertips.</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Women-Centric Itineraries</h3>
+                        <p>Curated travel plans with safe locations, well-lit places, and women-friendly accommodations.</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Community & Support</h3>
+                        <p>Connect with fellow women travelers, share experiences, and find travel buddies for your journey.</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-icon">
+                        <i class="fas fa-suitcase"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Smart Packing Checklist</h3>
+                        <p>Customized packing lists with essentials for women travelers and location-specific recommendations.</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Location Alerts</h3>
+                        <p>Real-time safety alerts based on your location and crowd-sourced safety data from other women travelers.</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Travel Journal</h3>
+                        <p>Document your journey with photos, videos, and notes to share or keep as private memories.</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Simple Process</span>
+                <h2 class="section-title">How SheTravels Works</h2>
+                <p class="section-description">Get started with SheTravels in just a few simple steps</p>
+            </div>
+            <div class="steps-wrapper">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <h3>Create Account</h3>
+                    <p>Sign up and complete your profile with your travel preferences and safety needs.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Choose Destination</h3>
+                    <p>Browse women-friendly destinations with safety ratings and reviews.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Plan Itinerary</h3>
+                    <p>Get curated itineraries designed specifically for women travelers.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step-item">
+                    <div class="step-number">04</div>
+                    <div class="step-icon">
+                        <i class="fas fa-plane-departure"></i>
+                    </div>
+                    <h3>Travel Safely</h3>
+                    <p>Enjoy your journey with our safety features and 24/7 support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Success Stories</span>
+                <h2 class="section-title">Hear From Our Community</h2>
+                <p class="section-description">Stories and experiences from women who have traveled solo using SheTravels</p>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"The safety features gave me the confidence to travel alone for the first time. The SOS button and verified stays made me feel secure throughout my journey."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Priya S.">
+                            <div class="author-info">
+                                <h4>Priya S.</h4>
+                                <p>Solo trip to Rajasthan</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"I connected with another solo traveler through the community feature, and we ended up exploring parts of Kerala together. Made a friend for life!"</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Meera K.">
+                            <div class="author-info">
+                                <h4>Meera K.</h4>
+                                <p>Backpacking in South India</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="testimonial-card">
+                        <div class="testimonial-quote">
+                            <i class="fas fa-quote-left"></i>
+                        </div>
+                        <p class="testimonial-text">"The women-centric itineraries were perfect! All the recommended places were safe, and I never felt uncomfortable even when exploring late evenings."</p>
+                        <div class="testimonial-author">
+                            <img src="/placeholder.svg?height=80&width=80" alt="Anjali T.">
+                            <div class="author-info">
+                                <h4>Anjali T.</h4>
+                                <p>Weekend getaway to Goa</p>
+                                <div class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-controls">
+                <button class="testimonial-prev"><i class="fas fa-chevron-left"></i></button>
+                <div class="testimonial-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="testimonial-next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations Section -->
+    <section class="destinations">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Popular Places</span>
+                <h2 class="section-title">Top Women-Friendly Destinations</h2>
+                <p class="section-description">Explore these highly-rated destinations known for their safety and women-friendly environment</p>
+            </div>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1506665531195-3566af2b4dfa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Udaipur">
+                        <div class="safety-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>98% Safe</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Udaipur, Rajasthan</h3>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                            <span><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p>Known for its palaces, lakes, and women-friendly environment.</p>
+                        <a href="#" class="btn btn-outline">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1580253466067-9df0b9b8e0f9?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Munnar">
+                        <div class="safety-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>97% Safe</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Munnar, Kerala</h3>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                            <span><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <p>Beautiful hill station with tea plantations and safe accommodations.</p>
+                        <a href="#" class="btn btn-outline">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="destination-card">
+                    <div class="destination-image">
+                        <img src="https://images.unsplash.com/photo-1517427677506-ade074eb1432?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="Pondicherry">
+                        <div class="safety-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>95% Safe</span>
+                        </div>
+                    </div>
+                    <div class="destination-content">
+                        <h3>Pondicherry</h3>
+                        <div class="destination-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> India</span>
+                            <span><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <p>French colonial heritage with peaceful beaches and women-friendly cafes.</p>
+                        <a href="#" class="btn btn-outline">Explore <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-wrapper">
+                <a href="#" class="btn btn-primary">View All Destinations <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Features Section -->
+    <section class="app-features">
+        <div class="container">
+            <div class="app-features-wrapper">
+                <div class="app-image">
+                    <img src="/placeholder.svg?height=600&width=300" alt="SheTravels App">
+                    <div class="app-notification">
+                        <div class="notification-icon">
+                            <i class="fas fa-bell"></i>
+                        </div>
+                        <div class="notification-content">
+                            <h4>Safety Alert</h4>
+                            <p>You're entering an area with low lighting. Take caution.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="app-content">
+                    <span class="section-subtitle">Mobile Experience</span>
+                    <h2 class="section-title">SheTravels in Your Pocket</h2>
+                    <p class="section-description">Access all safety features and travel resources on the go with our mobile app.</p>
+                    
+                    <div class="app-feature-list">
+                        <div class="app-feature-item">
+                            <div class="feature-check"><i class="fas fa-check"></i></div>
+                            <div class="feature-text">
+                                <h4>Real-time Safety Alerts</h4>
+                                <p>Get instant notifications about safety concerns in your area.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature-item">
+                            <div class="feature-check"><i class="fas fa-check"></i></div>
+                            <div class="feature-text">
+                                <h4>Offline Maps</h4>
+                                <p>Access maps and safety information even without internet connection.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature-item">
+                            <div class="feature-check"><i class="fas fa-check"></i></div>
+                            <div class="feature-text">
+                                <h4>SOS Button</h4>
+                                <p>One-tap emergency button to alert your trusted contacts.</p>
+                            </div>
+                        </div>
+                        <div class="app-feature-item">
+                            <div class="feature-check"><i class="fas fa-check"></i></div>
+                            <div class="feature-text">
+                                <h4>Community Chat</h4>
+                                <p>Connect with other women travelers in your area.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="app-buttons">
+                        <a href="#" class="app-button">
+                            <i class="fab fa-google-play"></i>
+                            <div class="app-button-text">
+                                <span>GET IT ON</span>
+                                <strong>Google Play</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="app-button">
+                            <i class="fab fa-apple"></i>
+                            <div class="app-button-text">
+                                <span>Download on the</span>
+                                <strong>App Store</strong>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-wrapper">
+                <div class="newsletter-content">
+                    <h2>Join Our Community</h2>
+                    <p>Subscribe to our newsletter for travel tips, safety updates, and exclusive offers.</p>
+                </div>
+                <form class="newsletter-form">
+                    <div class="form-group">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" id="privacy" required>
+                        <label for="privacy">I agree to receive emails and accept the <a href="#">Privacy Policy</a></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="/placeholder.svg?height=40&width=150" alt="TravelBuddy Logo">
+                    <p>Empowering women to explore the world safely, confidently, and on their own terms.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Press</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Features</h3>
+                        <ul>
+                            <li><a href="#">Budget Calculator</a></li>
+                            <li><a href="#">Itinerary Planner</a></li>
+                            <li><a href="#">SheTravels</a></li>
+                            <li><a href="#">Travel Guides</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Safety Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookie Policy</a></li>
+                            <li><a href="#">Copyright Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 TravelBuddy. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fab fa-cc-visa"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-cc-amex"></i>
+                    <i class="fab fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#" class="back-to-top">
+        <i class="fas fa-chevron-up"></i>
+    </a>
+
+    <script src="scripts/she-travels.js"></script>
+</body>
+</html>
