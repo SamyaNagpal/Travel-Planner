@@ -52,7 +52,7 @@ function renderSavedItinerary() {
         actDiv.innerHTML = `
           <h3>${act.name}</h3>
           <div class="activity-meta">
-            <span class="activity-cost">Cost: $${act.cost}</span>
+            <span class="activity-cost">Cost: ₹${act.cost}</span>
             <span class="activity-duration">${act.duration}</span>
           </div>
           <p class="activity-location">📍 ${act.location}</p>

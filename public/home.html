@@ -44,11 +44,14 @@
       <h1>Plan Your Perfect Journey</h1>
       <h5>Discover amazing destinations and track travel costs</h5>
       <div class="search-bar">
-          <input type="text" placeholder="Enter destination...">
-          <button class="search-button">
-              <i class="fas fa-search"></i> Search
-          </button>
-      </div>
+    <form id="destinationSearchForm" class="search-form">
+        <input type="text" id="destinationInput" placeholder="Enter destination..." required>
+        <button type="submit" class="search-button">
+            <i class="fas fa-search"></i> Search
+        </button>
+    </form>
+    <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
   </div>
 </section>
 
@@ -157,5 +160,6 @@
     </div>
 </footer>
     <script src="scripts/main.js"></script>
+    <script src="scripts/destination-search.js"></script>
 </body>
 </html>

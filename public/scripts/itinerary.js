@@ -74,7 +74,7 @@ function createActivityElement(activity, id, showRemoveBtn = true) {
          data-duration="${activity.duration}">
       <div class="activity-header">
         <h4>${activity.name}</h4>
-        <span class="activity-price">$${activity.cost}</span>
+        <span class="activity-price">₹${activity.cost}</span>
         ${showRemoveBtn ? `<button class="remove-btn" title="Remove">×</button>` : ''}
       </div>
       <div class="activity-meta">
