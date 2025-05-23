@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Travel Memories - TravelBuddy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/travel-journal.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-wrapper">
+                <div class="logo">
+                    <img src="/placeholder.svg?height=40&width=150" alt="TravelBuddy Logo">
+                </div>
+                <nav class="nav-menu">
+                    <ul class="nav-links">
+                        <li><a href="home.html">Home</a></li>
+                        <li><a href="budget.html">Budget</a></li>
+                        <li><a href="itinerary.html">Itinerary</a></li>
+                        <li><a href="she-travels.html">SheTravels</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html" class="btn-register">Register</a></li>
+                    </ul>
+                </nav>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">My Travel Memories</h1>
+                <p class="hero-subtitle">Cherish every journey, treasure every moment</p>
+                <button class="btn btn-primary btn-lg" id="create-journal-btn">
+                    <i class="fas fa-plus-circle"></i> Create New Memory
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journal Dashboard -->
+    <section class="journal-dashboard">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-title">
+                    <h2>My Memories Collection</h2>
+                    <p>Relive your adventures through these captured moments</p>
+                </div>
+                <div class="journal-filters">
+                    <div class="filter-group">
+                        <select id="sort-journals" class="styled-select">
+                            <option value="recent">Most Recent</option>
+                            <option value="oldest">Oldest First</option>
+                            <option value="name-asc">Name (A-Z)</option>
+                            <option value="name-desc">Name (Z-A)</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select id="filter-journals" class="styled-select">
+                            <option value="all">All Memories</option>
+                            <option value="private">Private Only</option>
+                            <option value="shared">Shared Only</option>
+                        </select>
+                    </div>
+                    <div class="search-group">
+                        <input type="text" placeholder="Search memories..." id="search-journals">
+                        <button class="search-btn"><i class="fas fa-search"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="journals-grid">
+                <!-- Manali Weekend -->
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <img src="https://images.unsplash.com/photo-1626621341517-bbf3d9990a23?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Manali Weekend">
+                        <div class="journal-status private">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="journal-date">
+                            <span>June 10-12, 2023</span>
+                        </div>
+                    </div>
+                    <div class="journal-info">
+                        <h3>Magical Manali Weekend</h3>
+                        <div class="journal-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Manali, Himachal Pradesh</span>
+                            <span><i class="fas fa-image"></i> 18 Photos</span>
+                        </div>
+                        <p>A refreshing weekend getaway to the mountains of Manali, enjoying the cool weather and stunning Himalayan views.</p>
+                        <div class="journal-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="action-btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Goa Beach Vacation -->
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <img src="https://images.unsplash.com/photo-1512343879784-a960bf40e7f2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Goa Beach Vacation">
+                        <div class="journal-status shared">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="journal-date">
+                            <span>April 5-10, 2023</span>
+                        </div>
+                    </div>
+                    <div class="journal-info">
+                        <h3>Sunny Days in Goa</h3>
+                        <div class="journal-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Goa, India</span>
+                            <span><i class="fas fa-image"></i> 32 Photos</span>
+                        </div>
+                        <p>Five days of sun, sand, and seafood in beautiful Goa. Explored beaches, tried water sports, and enjoyed the vibrant nightlife.</p>
+                        <div class="journal-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="action-btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Jaipur Heritage Tour -->
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <img src="https://images.unsplash.com/photo-1599661046289-e31897846e41?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Jaipur Heritage Tour">
+                        <div class="journal-status shared">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="journal-date">
+                            <span>March 15-18, 2023</span>
+                        </div>
+                    </div>
+                    <div class="journal-info">
+                        <h3>Pink City Chronicles</h3>
+                        <div class="journal-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Jaipur, Rajasthan</span>
+                            <span><i class="fas fa-image"></i> 27 Photos</span>
+                        </div>
+                        <p>Exploring the Pink City's magnificent forts, palaces, and vibrant markets. A perfect blend of history and culture.</p>
+                        <div class="journal-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="action-btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Darjeeling Tea Trails -->
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <img src="https://images.unsplash.com/photo-1544233726-9f1d0a91fd31?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Darjeeling Tea Trails">
+                        <div class="journal-status private">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="journal-date">
+                            <span>February 20-25, 2023</span>
+                        </div>
+                    </div>
+                    <div class="journal-info">
+                        <h3>Misty Darjeeling Escape</h3>
+                        <div class="journal-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Darjeeling, West Bengal</span>
+                            <span><i class="fas fa-image"></i> 22 Photos</span>
+                        </div>
+                        <p>A serene journey through the misty tea gardens of Darjeeling, with stunning views of the Kanchenjunga mountain range.</p>
+                        <div class="journal-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="action-btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Kerala Backwaters -->
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Kerala Backwaters">
+                        <div class="journal-status shared">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="journal-date">
+                            <span>January 5-12, 2023</span>
+                        </div>
+                    </div>
+                    <div class="journal-info">
+                        <h3>Serene Kerala Backwaters</h3>
+                        <div class="journal-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Alleppey, Kerala</span>
+                            <span><i class="fas fa-image"></i> 36 Photos</span>
+                        </div>
+                        <p>A peaceful houseboat journey through the serene backwaters of Kerala, experiencing local cuisine and village life.</p>
+                        <div class="journal-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="action-btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Rishikesh Yoga Retreat -->
+                <div class="journal-card">
+                    <div class="journal-cover">
+                        <img src="https://images.unsplash.com/photo-1584721284241-9764f53927eb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Rishikesh Yoga Retreat">
+                        <div class="journal-status private">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <div class="journal-date">
+                            <span>December 10-17, 2022</span>
+                        </div>
+                    </div>
+                    <div class="journal-info">
+                        <h3>Spiritual Rishikesh Journey</h3>
+                        <div class="journal-meta">
+                            <span><i class="fas fa-map-marker-alt"></i> Rishikesh, Uttarakhand</span>
+                            <span><i class="fas fa-image"></i> 15 Photos</span>
+                        </div>
+                        <p>A week of yoga, meditation, and spiritual awakening by the holy Ganges river in the yoga capital of the world.</p>
+                        <div class="journal-actions">
+                            <button class="action-btn edit-btn"><i class="fas fa-edit"></i> Edit</button>
+                            <button class="action-btn share-btn"><i class="fas fa-share-alt"></i> Share</button>
+                            <button class="action-btn delete-btn"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Add New Journal Card -->
+                <div class="journal-card new-journal">
+                    <div class="new-journal-content">
+                        <div class="new-journal-icon">
+                            <i class="fas fa-plus"></i>
+                        </div>
+                        <h3>Create New Memory</h3>
+                        <p>Start documenting your next adventure</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Memory Quotes Section -->
+    <section class="quotes-section">
+        <div class="container">
+            <div class="quote-card">
+                <div class="quote-icon">
+                    <i class="fas fa-quote-left"></i>
+                </div>
+                <blockquote>
+                    "Take only memories, leave only footprints."
+                </blockquote>
+                <cite>— Chief Seattle</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Journal Modal -->
+    <div class="modal" id="create-journal-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Create New Memory</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="journal-form">
+                    <div class="form-group">
+                        <label for="journal-title">Memory Title</label>
+                        <input type="text" id="journal-title" placeholder="e.g., Magical Manali Weekend" required>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="travel-start">Start Date</label>
+                            <input type="date" id="travel-start" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="travel-end">End Date</label>
+                            <input type="date" id="travel-end" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="journal-destination">Destination</label>
+                        <input type="text" id="journal-destination" placeholder="e.g., Manali, Himachal Pradesh" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="journal-description">Brief Description</label>
+                        <textarea id="journal-description" placeholder="Write a short description of your trip..." rows="3" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="journal-cover">Cover Image</label>
+                        <div class="file-upload">
+                            <input type="file" id="journal-cover" accept="image/*">
+                            <label for="journal-cover" class="file-upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>Choose a cover image</span>
+                            </label>
+                            <div class="file-preview" id="cover-preview"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Privacy Settings</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="private" name="privacy" value="private" checked>
+                                <label for="private">Private (Only you can see)</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="shared" name="privacy" value="shared">
+                                <label for="shared">Shared (Share with specific people)</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-secondary" id="cancel-journal">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Create Memory</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="/placeholder.svg?height=40&width=150" alt="TravelBuddy Logo">
+                    <p>Empowering women to explore the world safely, confidently, and on their own terms.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Our Team</a></li>
+                            <li><a href="#">Careers</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Features</h3>
+                        <ul>
+                            <li><a href="#">Budget Calculator</a></li>
+                            <li><a href="#">Itinerary Planner</a></li>
+                            <li><a href="#">Travel Journal</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Safety Center</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 TravelBuddy. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/travel-journal.js"></script>
+</body>
+</html>

@@ -509,4 +509,42 @@ nav{
   text-align: center;
 }
 
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo,
+.nav-links,
+.right-logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-links a {
+    margin: 0 0.75rem;
+    text-decoration: none;
+    color: #333;
+}
+
+.nav-button {
+    padding: 0.4rem 0.9rem;
+    border-radius: 4px;
+}
+
+.right-logo img.shetravels-logo {
+    height: 40px;
+    width: auto;
+}
 
