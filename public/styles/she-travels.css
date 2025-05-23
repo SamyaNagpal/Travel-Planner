@@ -1362,3 +1362,15 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+.nav-logo-right {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.top-right-logo {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+}
