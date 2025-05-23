@@ -17,6 +17,14 @@ function getNumberOfDays(start, end) {
   return Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) + 1; // Include both days
 }
 
+// Calculate average cost from array of objects
+function getAverageCostByCategory(array, category) {
+  const filtered = array.filter(item => item.budgetCategory === category);
+  if (filtered.length === 0) return 0;
+  const total = filtered.reduce((sum, item) => sum + (item.estimatedCost || 0), 0);
+  return total / filtered.length;
+}
+
 // Fetch Data and Calculate
 async function calculateBudget() {
   const loader = document.getElementById('loader');
@@ -25,6 +33,7 @@ async function calculateBudget() {
     // Show loader
     loader.style.display = 'block';
     
+    const selectedBudget = budgetSelect.value;
     const destination = destinationInput.value.trim();
     if (!destination) {
       alert('Please enter a destination');
@@ -39,18 +48,22 @@ async function calculateBudget() {
 
     // Calculate days
     const days = getNumberOfDays(startDateEl.value, endDateEl.value);
-    
+
     // Calculate costs
-    const hotelCost = data.hotelAvg * days;
-    const foodCost = data.foodAvg * days;
-    const transportCost = data.transportAvg * days;
+    const hotelAvg = getAverageCostByCategory(data.accommodations, selectedBudget);
+    const foodAvg = getAverageCostByCategory(data.foodOptions, selectedBudget);
+    const transportAvg = getAverageCostByCategory(data.transportation, selectedBudget);
+
+    const hotelCost = Math.round(hotelAvg * days);
+    const foodCost = Math.round(foodAvg * days);
+    const transportCost = Math.round(transportAvg * days);
     const total = hotelCost + foodCost + transportCost;
 
     // Update UI
-    document.getElementById('hotelCost').textContent = `$${hotelCost}`;
-    document.getElementById('foodCost').textContent = `$${foodCost}`;
-    document.getElementById('transportCost').textContent = `$${transportCost}`;
-    document.getElementById('totalCost').textContent = `$${total}`;
+    document.getElementById('hotelCost').textContent = `₹${hotelCost}`;
+    document.getElementById('foodCost').textContent = `₹${foodCost}`;
+    document.getElementById('transportCost').textContent = `₹${transportCost}`;
+    document.getElementById('totalCost').textContent = `₹${total}`;
 
   } catch (error) {
     alert(`Error: ${error.message}`);

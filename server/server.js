@@ -30,15 +30,39 @@ mongoose.connect(process.env.MONGODB_URI)
 // Schemas
 const destinationSchema = new mongoose.Schema({
   name: String,
-  hotelAvg: Number,
-  foodAvg: Number,
-  transportAvg: Number,
-  activities: [{
-    name: String,
-    location: String,
-    cost: Number,
-    duration: String
-  }]
+  location: String,
+  image: String, // Image URL of the location
+  description: String,
+  activities: [
+    {
+      name: String,
+      location: String,
+      image: String, // Image URL for the activity
+      cost: Number,
+      duration: String
+    }
+  ],
+  accommodations: [
+    {
+      name: String,
+      budgetCategory: { type: String, enum: ['low', 'medium', 'high'] },
+      estimatedCost: Number
+    }
+  ],
+  foodOptions: [
+    {
+      name: String,
+      budgetCategory: { type: String, enum: ['low', 'medium', 'high'] },
+      estimatedCost: Number
+    }
+  ],
+  transportation: [
+    {
+      mode: String,
+      budgetCategory: { type: String, enum: ['low', 'medium', 'high'] },
+      estimatedCost: Number
+    }
+  ]
 });
 
 const userSchema = new mongoose.Schema({

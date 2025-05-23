@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>View Itinerary - TravelM</title>
+  <link rel="stylesheet" href="styles/itinerary.css" />
+  <link rel="stylesheet" href="styles/view-itinerary.css" />
+</head>
+<body>
+  <nav class="navbar-cont">
+    <div class="logo">
+      <a href="home.html">
+        <img src="assets/images/logo1.png" alt="TravelBuddy Logo" class="navbar-logo normal-logo" />
+      </a>
+    </div>
+    <div class="links">
+      <a href="home.html" class="nav-link">Home</a>
+      <a href="budget.html" class="nav-link">Budget</a>
+      <a href="itinerary.html" class="nav-link">Itinerary</a>
+    </div>
+  </nav>
+
+  <main class="itinerary-container" style="max-width: 950px; margin: 50px auto;">
+    <h2>Your Saved Itinerary</h2>
+    <div id="viewItineraryContainer"></div>
+
+    <button class="back-button" onclick="goBack()">← Back to Itinerary Builder</button>
+  </main>
+
+  <script src="scripts/view-itinerary.js"></script>
+  <script>
+    function goBack() {
+      window.location.href = 'itinerary.html';
+    }
+  </script>
+</body>
+</html>
