@@ -27,7 +27,7 @@
             <a href="budget.html">Budget</a>
             <a href="itinerary.html">Itinerary</a>
             <a href="auth/login.html" class="nav-button login-btn">Login</a>
-            <a href="auth/register.html" class="nav-button register-btn">Register</a>
+            <a href="auth/register.html" class="cta-button">Register</a>
         </div>
 
         <!-- Right: SheTravels Logo -->
@@ -44,11 +44,14 @@
       <h1>Plan Your Perfect Journey</h1>
       <h5>Discover amazing destinations and track travel costs</h5>
       <div class="search-bar">
-          <input type="text" placeholder="Enter destination...">
-          <button class="search-button">
-              <i class="fas fa-search"></i> Search
-          </button>
-      </div>
+    <form id="destinationSearchForm" class="search-form">
+        <input type="text" id="destinationInput" placeholder="Enter destination..." required>
+        <button type="submit" class="search-button">
+            <i class="fas fa-search"></i> Search
+        </button>
+    </form>
+    <div id="searchSuggestions" class="search-suggestions"></div>
+</div>
   </div>
 </section>
 
@@ -156,6 +159,7 @@
         <p>&copy; 2023 TravelM. All rights reserved.</p>
     </div>
 </footer>
+<<<<<<< HEAD
    
 
     <!-- Chatbot Widget -->
@@ -168,6 +172,10 @@
   </div>
 </div>
 <script src="scripts/main.js"></script>
+=======
+    <script src="scripts/main.js"></script>
+    <script src="scripts/destination-search.js"></script>
+>>>>>>> 9c270cb64c94fa25c1c965ffd3f0b56ee097f26c
 </body>
 
  </html>

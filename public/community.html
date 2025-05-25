@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TravelSafe - Women's Safety Community</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="community.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="she-travels.html" class="logo">
+        <i class="fa-solid fa-arrow-left"></i>
+      </a>
+    </div>
+  </nav>
+
+  <main class="community-main">
+    <div class="community-header">
+      <h1><i class="fas fa-shield-alt"></i> Women's Community</h1>
+      <div class="destination-selector">
+        <select id="destinationSelect">
+          <option value="">Select Destination</option>
+          <option value="paris">Paris, France</option>
+          <option value="tokyo">Tokyo, Japan</option>
+          <option value="bali">Bali, Indonesia</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="community-grid">
+      <!-- Safety Resources Column -->
+      <div class="safety-resources">
+        <div class="safety-card emergency-contacts">
+          <h2><i class="fas fa-phone-alt"></i> Emergency Contacts</h2>
+          <ul>
+            <li><i class="fas fa-phone"></i> Local Police: <span>100</span></li>
+            <li><i class="fas fa-ambulance"></i> Medical: <span>108</span></li>
+            <li><i class="fas fa-flag"></i> Women's Helpline: <span>1091</span></li>
+          </ul>
+          <button class="quick-help">
+            <i class="fas fa-plus-circle"></i> Add Local Contacts
+          </button>
+        </div>
+
+        <div class="safety-card safety-tips">
+          <h2><i class="fas fa-lightbulb"></i> Safety Tips</h2>
+          <div class="tips-container">
+            <div class="tip">
+              <h3>Transportation</h3>
+              <p>Use only registered taxis or ride-sharing apps at night</p>
+            </div>
+            <div class="tip">
+              <h3>Areas to Avoid</h3>
+              <p>Market area after 10pm reported by 12 travelers</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="safety-card trusted-services">
+          <h2><i class="fas fa-check-circle"></i> Verified Services</h2>
+          <div class="services-list">
+            <div class="service">
+              <i class="fa-solid fa-taxi"></i>
+              <span>SafeRide Taxis</span>
+            </div>
+            <div class="service">
+              <i class="fa-solid fa-hotel"></i>
+              <span>Grand Hotel</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Community Chat Column -->
+      <div class="community-chat">
+        <div class="chat-header">
+          <h2><i class="fas fa-comments"></i> Destination Chat</h2>
+          <div class="online-count">
+            <i class="fas fa-user-friends"></i> <span id="onlineCount">0</span> travelers online
+          </div>
+        </div>
+
+        <div class="chat-messages" id="chatMessages">
+          <!-- Messages will appear here -->
+        </div>
+
+        <div class="chat-input">
+          <textarea id="messageInput" placeholder="Ask about safety in this destination..."></textarea>
+          <div class="chat-controls">
+            <button id="sendMessageBtn" class="send-btn">
+              <i class="fas fa-paper-plane"></i> Send
+            </button>
+            <button class="emergency-btn">
+              <i class="fas fa-exclamation-triangle"></i> Report Concern
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Emergency Modal -->
+  <div id="emergencyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-modal">&times;</span>
+      <h2><i class="fas fa-exclamation-circle"></i> Emergency Assistance</h2>
+      <div class="emergency-options">
+        <button class="emergency-option">
+          <i class="fas fa-map-marker-alt"></i> Share My Location
+        </button>
+        <button class="emergency-option">
+          <i class="fas fa-phone"></i> Call Local Emergency
+        </button>
+        <button class="emergency-option">
+          <i class="fas fa-user-shield"></i> Contact TravelSafe Support
+        </button>
+      </div>
+      <div class="emergency-contacts">
+        <h3>Nearby Safe Spaces</h3>
+        <ul>
+          <li><i class="fas fa-hotel"></i> Sunshine Hotel - 0.3 miles</li>
+          <li><i class="fas fa-utensils"></i> Cafe Mocha - 0.1 miles</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="community.js"></script>
+</body>
+</html>
