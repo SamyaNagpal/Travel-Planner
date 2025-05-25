@@ -58,7 +58,7 @@ nav{
   z-index: 999;
   background-color: #e7f1f1;
 }
-.sticky_nav{
+.navbar.sticky_nav{
   position: fixed;
   top: 0;
   left: 0;
@@ -86,6 +86,10 @@ nav{
   display: none;
 }
 
+.she-logo{
+  display: none;
+}
+
 .logo img,
 .navbar-logo {
   width: 168px;                 /* You can adjust this value as needed */
@@ -97,6 +101,15 @@ nav{
   display: none;
 }
 .sticky_nav .sticky-logo {
+  display: block;
+  mix-blend-mode: lighten;
+}
+
+.sticky_nav .shetravels-logo {
+  display: none;
+}
+
+.sticky_nav .she-logo {
   display: block;
   mix-blend-mode: lighten;
 }
@@ -647,6 +660,13 @@ nav{
 .right-logo img.shetravels-logo {
     height: 40px;
     width: auto;
+    margin-right: 40px;
+}
+
+.right-logo img.she-logo {
+    height: 70px;
+    width: 100px;
+    margin-right: 40px;
 }
 
 /* Floating Button */
