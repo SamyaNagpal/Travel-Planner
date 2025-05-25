@@ -1,9 +1,13 @@
 const express = require('express');
+
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const { GoogleGenerativeAI } = require('@google/generative-ai');
 require('dotenv').config();
+
+
 
 const app = express();
 
@@ -19,6 +23,54 @@ app.use(cors({
 
 app.use(express.json()); // For parsing application/json
 app.use(express.urlencoded({ extended: true })); // For form data
+
+
+const API_KEY = 'AIzaSyBq8irwRg0ujtyrlPTMbeeNYpVNElIMypI'; // Keep this secret in .env in production
+const genAI = new GoogleGenerativeAI(API_KEY);
+const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' });
+
+let chatSession = null;
+
+// Initialize chat session with system prompt
+async function initChat() {
+  chatSession = await model.startChat({
+    history: [
+      {
+        role: 'user',
+        parts: [{
+          text: `You are an expert travel planner specializing in Indian tourism. 
+          Your job is to help users plan trips across India with detailed itineraries, 
+          suggest best destinations, experiences, places to eat, local travel tips, and budget-friendly options. 
+          Always keep recommendations limited to destinations within India. 
+          Ask follow-up questions to gather necessary details like trip duration, budget, travel preferences 
+          (mountains, beaches, culture, food, etc.), and number of people traveling. 
+          Format itineraries day-wise and suggest realistic travel and stay plans. 
+          Avoid non-Indian destinations. Be helpful, polite, and culturally aware.`
+        }]
+      }
+    ]
+  });
+}
+
+initChat();
+
+app.post('/chat', async (req, res) => {
+  const userMessage = req.body.message;
+
+  if (!chatSession) {
+    await initChat();
+  }
+
+  try {
+    const result = await chatSession.sendMessage(userMessage);
+    const text = result.response.text();
+    res.json({ reply: text });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ reply: 'Sorry, an error occurred. Please try again.' });
+  }
+});
+
 
 
 
