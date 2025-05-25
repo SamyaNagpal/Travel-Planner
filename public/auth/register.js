@@ -43,7 +43,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
 
         console.log('Registration success:', data);
         storeToken(data.token);
-        window.location.href = '../itinerary.html';
+        window.location.href = '../home.html';
 
     } catch (error) {
         console.error('Registration error:', error);
