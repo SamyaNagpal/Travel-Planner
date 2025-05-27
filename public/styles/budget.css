@@ -91,7 +91,7 @@ body{
   
   .cost-items {
     border-top: 2px solid #eee;
-    padding-top: 1.5rem;
+    padding: 1.5rem;
   }
   
   .cost-item {
@@ -99,16 +99,22 @@ body{
     justify-content: space-between;
     padding: 1rem 0;
     border-bottom: 1px solid #eee;
+    
   }
   
   .category {
     color: #2c3e50;
     font-weight: 500;
+    font-size: 18px;
   }
   
   .amount {
     color: #27ae60;
     font-weight: bold;
+    font-size: 18px;
+  }
+  .total-amount{
+    color: #27ae60 !important;
   }
   
   /* Form Styles */
