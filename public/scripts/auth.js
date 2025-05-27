@@ -14,7 +14,7 @@ export function storeToken(token) {
 
 export function redirectIfAuthenticated() {
     if (localStorage.getItem('jwtToken')) {
-        window.location.href = '../itinerary.html';
+        window.location.href = '../home.html';
     }
 }
 

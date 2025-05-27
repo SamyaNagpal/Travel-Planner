@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const data = await handleAuthResponse(response);
             storeToken(data.token);
-            window.location.href = '../itinerary.html';
+            window.location.href = '../home.html';
         } catch (error) {
             document.getElementById('authError').textContent = error.message;
         }

@@ -1,11 +1,17 @@
+require('dotenv').config();
+
 const express = require('express');
+const axios = require('axios');
+
+const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+
 
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
-require('dotenv').config();
+
 
 
 
@@ -71,6 +77,24 @@ app.post('/chat', async (req, res) => {
   }
 });
 
+app.get('/api/geocode', async (req, res) => {
+  const address = req.query.address;
+  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
+
+  try {
+    const response = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json`, {
+      params: {
+        address,
+        key: apiKey
+      }
+    });
+
+    res.json(response.data);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Failed to fetch location data' });
+  }
+});
 
 
 
@@ -142,7 +166,33 @@ const authenticate = (req, res, next) => {
 
 // Routes
 
+app.post("/add-contact", async (req, res) => {
+  try {
+    const { name, number, relationship } = req.body;
 
+    if (!name || !number || !relationship) {
+      return res.status(400).json({ success: false, message: "Missing fields" });
+    }
+
+    await client.connect();
+    const db = client.db("travelDB");
+    const collection = db.collection("femaleusers");
+
+    await collection.insertOne({
+      name,
+      number,
+      relationship,
+      addedAt: new Date()
+    });
+
+    res.json({ success: true });
+  } catch (error) {
+    console.error("Error saving contact:", error);
+    res.status(500).json({ success: false });
+  } finally {
+    await client.close();
+  }
+});
 
 app.post('/api/register', async (req, res) => {
   try {
@@ -212,6 +262,31 @@ app.get('/api/user', authenticate, async (req, res) => {
   }
 });
 
-// Server
+
+
+
+const emergencyContacts = [
+  { name: "Mom", phone: "+919876543210" },
+  { name: "Friend", phone: "+918765432109" },
+];
+
+
+
+app.post('/api/share-location', (req, res) => {
+  const { latitude, longitude } = req.body;
+
+  if (!latitude || !longitude) {
+    return res.status(400).json({ message: 'Invalid location data' });
+  }
+
+  // You can log or save this info if needed
+  console.log('Received location:', latitude, longitude);
+
+  // Simulate sending to emergency contacts
+  return res.status(200).json({ message: 'Location sent to emergency contacts' });
+});
+
+
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
