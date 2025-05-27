@@ -138,13 +138,6 @@ const destinationSchema = new mongoose.Schema({
       budgetCategory: { type: String, enum: ['low', 'medium', 'high'] },
       estimatedCost: Number
     }
-  ],
-  helplineNo: [
-    {
-      womenHelp: Number,
-      medicalName: String,
-      medicalNo: Number
-    }
   ]
 });
 
@@ -152,6 +145,10 @@ const userSchema = new mongoose.Schema({
   email: { type: String, unique: true, required: true },
   password: { type: String, required: true }
 });
+
+ HEAD
+// Models
+
 
 const femaleUserSchema = new mongoose.Schema({
   name: { type: String, required: true },
@@ -168,6 +165,7 @@ const femaleUserSchema = new mongoose.Schema({
 const Destination = mongoose.model('Destination', destinationSchema);
 const User = mongoose.model('User', userSchema);
 const FemaleUser = mongoose.model('FemaleUser', femaleUserSchema);
+
 
 // Auth Middleware
 const authenticate = (req, res, next) => {
