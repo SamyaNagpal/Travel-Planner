@@ -35,27 +35,28 @@
         <div class="safety-card emergency-contacts">
           <h2><i class="fas fa-phone-alt"></i> Emergency Contacts</h2>
           <ul>
-            <li><i class="fas fa-phone"></i> Local Police: <span>100</span></li>
+            <li><i classe ="fas fa-phone"></i> Local Police: <span>100</span></li>
             <li><i class="fas fa-ambulance"></i> Medical: <span>108</span></li>
             <li><i class="fas fa-flag"></i> Women's Helpline: <span>1091</span></li>
           </ul>
           <!-- Your contact list -->
-<ul id="contact-list">
-  <!-- Existing contacts -->
-</ul>
+          <h3>Your Emergency Contacts</h3>
+          <ul id="contact-list" class="personal-contacts">
+            <!-- Contacts will be loaded here dynamically -->
+          </ul>
 
-<!-- Add Contact Button -->
-<button class="quick-help" id="addContactBtn">
-  <i class="fas fa-plus-circle"></i> Add Local Contacts
-</button>
+          <!-- Add Contact Button -->
+          <button class="quick-help" id="addContactBtn">
+            <i class="fas fa-plus-circle"></i> Add Local Contacts
+          </button>
 
-<!-- Hidden form popup -->
-<div id="contactForm" style="display:none; margin-top: 20px;">
-  <input type="text" id="contactName" placeholder="Contact Name" required>
-  <input type="text" id="contactNumber" placeholder="Contact Number" required>
-  <input type="text" id="contactRelation" placeholder="Relationship" required>
-  <button id="submitContact">Save Contact</button>
-</div>
+          <!-- Hidden form popup -->
+          <div class="contact-Form" id="contactForm" style="display:none; margin-top: 20px;">
+            <input type="text" id="contactName" placeholder="Contact Name" required>
+            <input type="text" id="contactNumber" placeholder="Contact Number" required>
+            <input type="text" id="contactRelation" placeholder="Relationship" required>
+            <button id="submitContact">Save Contact</button>
+          </div>
 
 
         <div class="safety-card safety-tips">
@@ -86,14 +87,14 @@
           </div>
         </div>
       </div>
-
-      <!-- Community Chat Column -->
+    </div>
+    <!-- Community Chat Column -->
       <div class="community-chat">
         <div class="chat-header">
           <h2><i class="fas fa-comments"></i> Destination Chat</h2>
-          <div class="online-count">
+          <!--<div class="online-count">
             <i class="fas fa-user-friends"></i> <span id="onlineCount">0</span> travelers online
-          </div>
+          </div>-->
         </div>
 
         <div class="chat-messages" id="chatMessages">
@@ -112,7 +113,6 @@
           </div>
         </div>
       </div>
-    </div>
   </main>
 
   <!-- Emergency Modal -->
@@ -121,17 +121,17 @@
       <span class="close-modal">&times;</span>
       <h2><i class="fas fa-exclamation-circle"></i> Emergency Assistance</h2>
       <div class="emergency-options">
-        <button class="emergency-option">
           <!-- Inside emergency-options div -->
-            <button class="emergency-option" id="shareLocationBtn">Share Location</button>
+            <button class="emergency-option" id="shareLocationBtn">
+              <i class="fas fa-map-marker-alt"></i>Share Location</button>
            <div id="locationDisplay"></div> 
 
         <button class="emergency-option">
           <i class="fas fa-phone"></i> Call Local Emergency
         </button>
-        <button class="emergency-option">
+        <!--<button class="emergency-option">
           <i class="fas fa-user-shield"></i> Contact TravelSafe Support
-        </button>
+        </button>-->
       </div>
       <div class="emergency-contacts">
         <h3>Nearby Safe Spaces</h3>

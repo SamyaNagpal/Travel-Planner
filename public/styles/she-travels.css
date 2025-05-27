@@ -462,8 +462,11 @@ section {
 
 .features-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
+    justify-content: center;
+    align-items: stretch;
+    padding: 20px 10px;
 }
 
 .feature-card {
@@ -774,7 +777,7 @@ section {
 
 /* Destinations Section */
 .destinations {
-    background-color: white;
+    background-color: #faeef6;
 }
 
 .destinations-grid {
@@ -872,7 +875,6 @@ section {
 
 /* App Features Section */
 .app-features {
-    background-color: var(--bg-light);
     position: relative;
     overflow: hidden;
 }
@@ -1107,6 +1109,11 @@ section {
     grid-template-columns: 1.5fr 2.5fr;
     gap: 50px;
     margin-bottom: 50px;
+}
+
+.footer-logo img{
+mix-blend-mode: lighten;
+  height: 60px;
 }
 
 .footer-logo p {

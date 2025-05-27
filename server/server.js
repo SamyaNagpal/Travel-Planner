@@ -146,9 +146,26 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 });
 
+ HEAD
+// Models
+
+
+const femaleUserSchema = new mongoose.Schema({
+  name: { type: String, required: true },
+  emergencyContacts: [
+    {
+      name: { type: String, required: true },
+      phone: { type: String, required: true },
+      relationship: { type: String, required: true }
+    }
+  ]
+});
+
 // Models
 const Destination = mongoose.model('Destination', destinationSchema);
 const User = mongoose.model('User', userSchema);
+const FemaleUser = mongoose.model('FemaleUser', femaleUserSchema);
+
 
 // Auth Middleware
 const authenticate = (req, res, next) => {
@@ -163,6 +180,71 @@ const authenticate = (req, res, next) => {
     res.status(400).json({ error: 'Invalid token' });
   }
 };
+
+// Add contact route
+app.post('/add-contact', async (req, res) => {
+  try {
+    const { name, number, relationship, userId } = req.body;
+    
+    // Find the female user and add the contact
+    const femaleUser = await FemaleUser.findById(userId);
+    if (!femaleUser) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    femaleUser.emergencyContacts.push({
+      name,
+      phone: number,
+      relationship
+    });
+
+    await femaleUser.save();
+
+    res.json({ success: true, message: 'Contact added successfully', contacts: femaleUser.emergencyContacts });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
+
+// Get contacts route
+app.get('/get-contacts/:userId', async (req, res) => {
+  try {
+    const femaleUser = await FemaleUser.findById(req.params.userId);
+    if (!femaleUser) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    res.json({ success: true, contacts: femaleUser.emergencyContacts });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
+
+app.delete('/delete-contact/:contactId', async (req, res) => {
+  try {
+    const { userId } = req.body;
+    const { contactId } = req.params;
+
+    const femaleUser = await FemaleUser.findById(userId);
+    if (!femaleUser) {
+      return res.status(404).json({ success: false, message: 'User not found' });
+    }
+
+    // Remove the contact
+    femaleUser.emergencyContacts = femaleUser.emergencyContacts.filter(
+      contact => contact._id.toString() !== contactId
+    );
+
+    await femaleUser.save();
+
+    res.json({ success: true, message: 'Contact deleted successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: 'Server error' });
+  }
+});
 
 // Routes
 
@@ -253,7 +335,7 @@ app.get('/api/destination/:name', async (req, res) => {
 // Protected Routes
 
 
-app.get('/api/user', authenticate, async (req, res) => {
+/*app.get('/api/user', authenticate, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
     res.json(user);
@@ -268,7 +350,7 @@ app.get('/api/user', authenticate, async (req, res) => {
 const emergencyContacts = [
   { name: "Mom", phone: "+919876543210" },
   { name: "Friend", phone: "+918765432109" },
-];
+];*/
 
 
 
