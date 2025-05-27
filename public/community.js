@@ -206,7 +206,7 @@ document.getElementById("shareLocationBtn").addEventListener("click", () => {
           `Latitude: ${latitude}\nLongitude: ${longitude}`;
 
         // Send location to backend
-        fetch("http://127.0.0.1:3000/api/share-location", {
+        fetch("http://127.0.0.1:3001/api/share-location", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

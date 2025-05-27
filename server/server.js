@@ -337,7 +337,7 @@ app.get('/api/destination/:name', async (req, res) => {
 // Protected Routes
 
 
-/*app.get('/api/user', authenticate, async (req, res) => {
+app.get('/api/user', authenticate, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select('-password');
     res.json(user);
@@ -352,7 +352,7 @@ app.get('/api/destination/:name', async (req, res) => {
 const emergencyContacts = [
   { name: "Mom", phone: "+919876543210" },
   { name: "Friend", phone: "+918765432109" },
-];*/
+];
 
 
 

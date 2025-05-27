@@ -1,4 +1,25 @@
 /* Smart Packing Checklist Specific Styles */
+:root{
+    --primary-color: #f4568b;
+    --primary-dark: #e91e63;
+    --primary-light: #ff8a8a;
+    --secondary-color: #6c63ff;
+    --accent-color: #4ecdc4;
+    --dark-color: #2d3436;
+    --text-color: #333;
+    --text-light: #666;
+    --text-lighter: #999;
+    --bg-color: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-dark: #f0f4f8;
+    --border-color: #e1e4e8;
+    --border-radius: 10px;
+    --border-radius-sm: 5px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
 
 /* Hero Section */
 .packing-hero {
@@ -15,7 +36,7 @@
 .feature-icon-large {
     width: 120px;
     height: 120px;
-    background: linear-gradient(135deg, #ff6b6b, #ff8a8a);
+    background: linear-gradient(135deg, #e91e63, #f4568b);
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -24,7 +45,7 @@
     color: white;
     font-size: 3rem;
     position: relative;
-    box-shadow: 0 15px 30px rgba(255, 107, 107, 0.3);
+    box-shadow: 0 15px 30px rgba(233, 150, 235, 0.3);
 }
 
 .feature-icon-large::after {
@@ -371,6 +392,14 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+}
+
+.btn-secondary{
+    color: white;
+}
+
+.btn-secondary:hover{
+    color: rgb(0, 0, 0);
 }
 
 /* Responsive Styles */

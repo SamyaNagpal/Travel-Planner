@@ -1,18 +1,23 @@
 /* Base Styles */
 :root {
-    --primary-color: #ff7e5f;
-    --primary-dark: #ff6347;
-    --primary-light: #ffa07a;
-    --secondary-color: #feb47b;
+    --primary-color: #f4568b;
+    --primary-dark: #e91e63;
+    --primary-light: #ff8ac6;
+    --secondary-color: #ff94da;
     --accent-color: #7b68ee;
+    --dark-color: #2d3436;
     --text-color: #333;
     --text-light: #666;
     --text-dark: #222;
+    --text-lighter: #999;
     --bg-color: #fff9f5;
     --card-bg: #ffffff;
-    --border-color: #f0e4d7;
-    --border-radius: 12px;
-    --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    --bg-light: #f8f9fa;
+    --bg-dark: #f0f4f8;
+    --border-color: #e1e4e8;
+    --border-radius: 10px;
+    --border-radius-sm: 5px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     --transition: all 0.3s ease;
     --font-heading: 'Playfair Display', serif;
     --font-body: 'Poppins', sans-serif;
@@ -26,7 +31,7 @@
 
 body {
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: #fcf6fa;
     line-height: 1.6;
     font-family: var(--font-body);
 }
@@ -130,7 +135,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(to right, rgba(255, 126, 95, 0.8), rgba(254, 180, 123, 0.8));
+    background: linear-gradient(to right, rgba(226, 67, 157, 0.8), rgba(235, 166, 210, 0.8));
 }
 
 .hero-content {
@@ -729,8 +734,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo img {
-    height: 40px;
-    margin-bottom: 20px;
+    height: 50px;
+    margin-bottom: 10px;
 }
 
 .footer-logo p {
