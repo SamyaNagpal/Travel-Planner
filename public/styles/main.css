@@ -1,4 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --primary-color: #ff6b6b;
+    --primary-dark: #ff5252;
+    --primary-light: #ff8a8a;
+    --secondary-color: #6c63ff;
+    --accent-color: #4ecdc4;
+    --dark-color: #2d3436;
+    --text-color: #333;
+    --text-light: #666;
+    --text-lighter: #999;
+    --bg-color: #ffffff;
+    --bg-light: #f8f9fa;
+    --bg-dark: #f0f4f8;
+    --border-color: #e1e4e8;
+    --border-radius: 10px;
+    --border-radius-sm: 5px;
+    --box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Poppins', sans-serif;
+}
 
 *{
   margin: 0;
@@ -58,7 +79,7 @@ nav{
   z-index: 999;
   background-color: #e7f1f1;
 }
-.sticky_nav{
+.navbar.sticky_nav{
   position: fixed;
   top: 0;
   left: 0;
@@ -86,6 +107,10 @@ nav{
   display: none;
 }
 
+.she-logo{
+  display: none;
+}
+
 .logo img,
 .navbar-logo {
   width: 168px;                 /* You can adjust this value as needed */
@@ -97,6 +122,15 @@ nav{
   display: none;
 }
 .sticky_nav .sticky-logo {
+  display: block;
+  mix-blend-mode: lighten;
+}
+
+.sticky_nav .shetravels-logo {
+  display: none;
+}
+
+.sticky_nav .she-logo {
   display: block;
   mix-blend-mode: lighten;
 }
@@ -348,7 +382,10 @@ nav{
 }
 
 .alert-content i {
-  font-size: 2rem;
+  font-size: 2.3rem;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .alert-text h3 {
@@ -647,6 +684,13 @@ nav{
 .right-logo img.shetravels-logo {
     height: 40px;
     width: auto;
+    margin-right: 40px;
+}
+
+.right-logo img.she-logo {
+    height: 70px;
+    width: 100px;
+    margin-right: 40px;
 }
 
 /* Floating Button */
@@ -693,7 +737,7 @@ nav{
 }
 
 #chatbot-header {
-  background: linear-gradient(135deg, #9b0bef 0%, #05a8f5 100%);
+  background: linear-gradient(135deg, #18d767 0%, #10e8cb 100%);
   color: white;
   padding: 12px 10px;
   font-weight: 600;
@@ -820,4 +864,102 @@ nav{
 
 #chatbot-messages::-webkit-scrollbar-thumb:hover {
   background: #a8a8a8;
+}
+
+/* Destinations Section */
+.destinations {
+    background-color: white;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.destination-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+}
+
+.destination-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.destination-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.destination-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.destination-card:hover .destination-image img {
+    transform: scale(1.1);
+}
+
+.safety-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.safety-badge i {
+    color: var(--primary-color);
+}
+
+.destination-content {
+    padding: 20px;
+}
+
+.destination-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: var(--dark-color);
+}
+
+.destination-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.destination-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.destination-meta i {
+    color: var(--primary-color);
+}
+
+.destination-content p {
+    color: var(--text-light);
+    margin-bottom: 20px;
+    font-size: 0.9rem;
+}
+
+.view-all-wrapper {
+    text-align: center;
 }

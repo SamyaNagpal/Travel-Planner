@@ -6,7 +6,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Supported destinations
     const destinations = {
         'shimla': 'destinations/shimla.html',
-        'goa': 'destinations/goa.html'
+        'goa': 'destinations/goa.html',
+        'leh': 'destinations/leh.html',
+        'ladakh': 'destinations/leh.html'
     };
     
     // Show suggestions

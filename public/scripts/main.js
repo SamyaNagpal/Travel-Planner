@@ -1,4 +1,4 @@
-let nav = document.querySelector('nav');
+let nav = document.getElementById('mainNav');
 
 window.addEventListener('scroll', () =>{
     if(window.scrollY > 100){
