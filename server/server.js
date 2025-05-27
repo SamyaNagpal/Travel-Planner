@@ -153,7 +153,7 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 });
 
-const femaleuserSchema = new mongoose.Schema({
+const femaleUserSchema = new mongoose.Schema({
   name: { type: String, required: true },
   emergencyContacts: [
     {
@@ -167,7 +167,7 @@ const femaleuserSchema = new mongoose.Schema({
 // Models
 const Destination = mongoose.model('Destination', destinationSchema);
 const User = mongoose.model('User', userSchema);
-const EmergencyContact = mongoose.model('EmergencyContact', emergencyContactSchema);
+const FemaleUser = mongoose.model('FemaleUser', femaleUserSchema);
 
 // Auth Middleware
 const authenticate = (req, res, next) => {
