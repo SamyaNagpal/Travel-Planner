@@ -210,6 +210,38 @@ body {
   background-color: #357ABD;
 }
 
+/* Add this to your CSS file */
+.personal-contacts {
+  margin-top: 15px;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.personal-contacts li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal-contacts li i {
+  margin-right: 8px;
+  color: #6c63ff;
+}
+
+.delete-contact {
+  background: none;
+  border: none;
+  color: #ff6b6b;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.delete-contact:hover {
+  color: #ff0000;
+}
+
 
 .tips-container {
   display: flex;

@@ -515,6 +515,7 @@ nav{
 
 .footer-section img{
   mix-blend-mode: lighten;
+  height: 60px;
 }
 
 .footer-logo {
