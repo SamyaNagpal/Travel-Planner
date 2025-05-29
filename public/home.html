@@ -46,16 +46,18 @@
 
 <section class="hero">
   <div class="hero-content">
-      <h1>Plan Your Perfect Journey</h1>
-      <h5>Discover amazing destinations and track travel costs</h5>
-      <div class="search-bar">
-          <input type="text" placeholder="Enter destination...">
-          <button class="search-button">
-              <i class="fas fa-search"></i> Search
-          </button>
-      </div>
+    <h1>Plan Your Perfect Journey</h1>
+    <h5>Discover amazing destinations and track travel costs</h5>
+    <form id="destinationSearchForm" class="search-bar">
+        <input type="text" id="destinationInput" placeholder="Enter destination...">
+        <button class="search-button" type="submit">
+            <i class="fas fa-search"></i> Search
+        </button>
+        <div id="searchSuggestions" class="search-suggestions"></div>
+    </form>
   </div>
 </section>
+
 
 <section class="features">
     <div class="features-container">
@@ -262,4 +264,4 @@
     <script src="scripts/destination-search.js"></script>
 </body>
 
- </html>
+</html>

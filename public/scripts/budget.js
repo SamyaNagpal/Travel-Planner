@@ -41,7 +41,7 @@ async function calculateBudget() {
     }
 
     // Fetch data from backend
-    const response = await fetch(`http://localhost:3000/api/destination/${encodeURIComponent(destination)}`);
+    const response = await fetch(`http://localhost:3001/api/destination/${encodeURIComponent(destination)}`);
     if (!response.ok) throw new Error('Destination not found');
     
     const data = await response.json();

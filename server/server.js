@@ -146,9 +146,6 @@ const userSchema = new mongoose.Schema({
   password: { type: String, required: true }
 });
 
- HEAD
-// Models
-
 
 const femaleUserSchema = new mongoose.Schema({
   name: { type: String, required: true },

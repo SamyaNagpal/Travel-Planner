@@ -295,7 +295,7 @@ async function fetchDestinationData() {
     // If no saved itinerary found, fetch fresh data
     if (!itineraryLoaded) {
       const response = await fetch(
-        `http://localhost:3000/api/destination/${encodeURIComponent(tripData.destination)}`
+        `http://localhost:3001/api/destination/${encodeURIComponent(tripData.destination)}`
       );
       if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
 
